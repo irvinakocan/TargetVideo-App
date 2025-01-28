@@ -52,7 +52,13 @@ class VideoTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func configure() {
-        
+    public func configure(model: YouTubeItem) {
+        thumbnailView.image = UIImage(systemName: "person")
+        title.text = model.snippet.title
+    }
+    
+    override func prepareForReuse() {
+        thumbnailView.image = nil
+        title.text = nil
     }
 }

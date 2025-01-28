@@ -7,25 +7,26 @@
 
 import Foundation
 
-struct YouTubeResponse {
+struct YouTubeResponse: Codable {
     let items: [YouTubeItem]
+    let nextPageToken: String
 }
 
-struct YouTubeItem {
+struct YouTubeItem: Codable {
     let id: String
     let snippet: Snippet
 }
 
-struct Snippet {
+struct Snippet: Codable {
     let title: String
     let description: String
     let thumbnails: Thumbnails
 }
 
-struct Thumbnails {
+struct Thumbnails: Codable {
     let medium: MediumThumbnail
 }
 
-struct MediumThumbnail {
+struct MediumThumbnail: Codable {
     let url: String
 }

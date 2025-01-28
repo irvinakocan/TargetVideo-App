@@ -8,6 +8,6 @@
 import Foundation
 
 let YOUTUBE_API = "https://www.googleapis.com/youtube/v3"
-let GET_ENDPOINT = "/videos"
+let GET_VIDEOS_ENDPOINT = "/videos"
 let API_KEY = "AIzaSyDH9SiV5W4JuUBtKVkpOSxxrUXeAPVdvVA"
 
