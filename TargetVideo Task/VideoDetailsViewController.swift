@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import youtube_ios_player_helper
 
 class VideoDetailsViewController: UIViewController {
     
@@ -16,6 +17,7 @@ class VideoDetailsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         view.backgroundColor = .white
+        title = "Video Details Page"
     }
     
     init(videoItem: YouTubeItem) {
