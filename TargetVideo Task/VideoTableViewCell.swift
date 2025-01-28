@@ -34,7 +34,7 @@ class VideoTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             thumbnailView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30),
             thumbnailView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 30),
-            thumbnailView.heightAnchor.constraint(equalToConstant: 150),
+            thumbnailView.heightAnchor.constraint(equalToConstant: 90),
             thumbnailView.widthAnchor.constraint(equalToConstant: 150)
         ])
         
@@ -53,7 +53,14 @@ class VideoTableViewCell: UITableViewCell {
     }
     
     public func configure(model: YouTubeItem) {
-        thumbnailView.image = UIImage(systemName: "person")
+        Task {
+            if let data = await APICaller.getImageData(urlString: model.snippet.thumbnails.medium.url) {
+                thumbnailView.image = UIImage(data: data)
+            }
+            else {
+                thumbnailView.image = UIImage(systemName: "video")
+            }
+        }
         title.text = model.snippet.title
     }
     
