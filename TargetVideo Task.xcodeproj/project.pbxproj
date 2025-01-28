@@ -15,6 +15,7 @@
 		241AFC0A2D4916D8004C6FDB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241AFC092D4916D8004C6FDB /* HomeViewController.swift */; };
 		241AFC0C2D491F7A004C6FDB /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241AFC0B2D491F7A004C6FDB /* VideoTableViewCell.swift */; };
 		241AFC0E2D493903004C6FDB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241AFC0D2D493903004C6FDB /* Constants.swift */; };
+		241AFC102D494244004C6FDB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241AFC0F2D494244004C6FDB /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		241AFC092D4916D8004C6FDB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		241AFC0B2D491F7A004C6FDB /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		241AFC0D2D493903004C6FDB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		241AFC0F2D494244004C6FDB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				241AFBF52D490F62004C6FDB /* AppDelegate.swift */,
 				241AFBF72D490F62004C6FDB /* SceneDelegate.swift */,
 				241AFC0D2D493903004C6FDB /* Constants.swift */,
+				241AFC0F2D494244004C6FDB /* Models.swift */,
 				241AFC0B2D491F7A004C6FDB /* VideoTableViewCell.swift */,
 				241AFC092D4916D8004C6FDB /* HomeViewController.swift */,
 				241AFBFB2D490F62004C6FDB /* Main.storyboard */,
@@ -147,6 +150,7 @@
 				241AFC0E2D493903004C6FDB /* Constants.swift in Sources */,
 				241AFBF62D490F62004C6FDB /* AppDelegate.swift in Sources */,
 				241AFC0C2D491F7A004C6FDB /* VideoTableViewCell.swift in Sources */,
+				241AFC102D494244004C6FDB /* Models.swift in Sources */,
 				241AFBF82D490F62004C6FDB /* SceneDelegate.swift in Sources */,
 				241AFC0A2D4916D8004C6FDB /* HomeViewController.swift in Sources */,
 			);
