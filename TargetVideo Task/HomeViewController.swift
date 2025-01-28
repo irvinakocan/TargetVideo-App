@@ -37,7 +37,7 @@ class HomeViewController: UIViewController {
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
@@ -56,6 +56,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(model: videos[indexPath.row])
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let videoDetailsVC = VideoDetailsViewController(videoItem: videos[indexPath.row])
+        self.navigationController?.pushViewController(videoDetailsVC, animated: true)
     }
 }
 

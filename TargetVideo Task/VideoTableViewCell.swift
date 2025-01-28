@@ -34,7 +34,7 @@ class VideoTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             thumbnailView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30),
             thumbnailView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 30),
-            thumbnailView.heightAnchor.constraint(equalToConstant: 90),
+            thumbnailView.heightAnchor.constraint(equalToConstant: 100),
             thumbnailView.widthAnchor.constraint(equalToConstant: 150)
         ])
         
