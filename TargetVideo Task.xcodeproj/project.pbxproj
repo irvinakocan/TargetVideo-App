@@ -18,9 +18,11 @@
 		241AFC102D494244004C6FDB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241AFC0F2D494244004C6FDB /* Models.swift */; };
 		241AFC122D49488D004C6FDB /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241AFC112D49488D004C6FDB /* APICaller.swift */; };
 		241AFC142D496722004C6FDB /* VideoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241AFC132D496722004C6FDB /* VideoDetailsViewController.swift */; };
+		F92BD4DC43DB7F49CC0C0B24 /* Pods_TargetVideo_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49261FA8CDCA3BD69B5327DA /* Pods_TargetVideo_Task.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11FFA771AF383CBA3017818A /* Pods-TargetVideo Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetVideo Task.debug.xcconfig"; path = "Target Support Files/Pods-TargetVideo Task/Pods-TargetVideo Task.debug.xcconfig"; sourceTree = "<group>"; };
 		241AFBF22D490F62004C6FDB /* TargetVideo Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TargetVideo Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		241AFBF52D490F62004C6FDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		241AFBF72D490F62004C6FDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +36,8 @@
 		241AFC0F2D494244004C6FDB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		241AFC112D49488D004C6FDB /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		241AFC132D496722004C6FDB /* VideoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailsViewController.swift; sourceTree = "<group>"; };
+		49261FA8CDCA3BD69B5327DA /* Pods_TargetVideo_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TargetVideo_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B21D3B4E78196D73586EF507 /* Pods-TargetVideo Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetVideo Task.release.xcconfig"; path = "Target Support Files/Pods-TargetVideo Task/Pods-TargetVideo Task.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +45,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F92BD4DC43DB7F49CC0C0B24 /* Pods_TargetVideo_Task.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12613595088B1A4693A1DB93 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11FFA771AF383CBA3017818A /* Pods-TargetVideo Task.debug.xcconfig */,
+				B21D3B4E78196D73586EF507 /* Pods-TargetVideo Task.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		241AFBE92D490F62004C6FDB = {
 			isa = PBXGroup;
 			children = (
 				241AFBF42D490F62004C6FDB /* TargetVideo Task */,
 				241AFBF32D490F62004C6FDB /* Products */,
+				12613595088B1A4693A1DB93 /* Pods */,
+				F193C072E7B4A8CE875CC322 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +99,14 @@
 			path = "TargetVideo Task";
 			sourceTree = "<group>";
 		};
+		F193C072E7B4A8CE875CC322 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49261FA8CDCA3BD69B5327DA /* Pods_TargetVideo_Task.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +114,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 241AFC062D490F67004C6FDB /* Build configuration list for PBXNativeTarget "TargetVideo Task" */;
 			buildPhases = (
+				E42D48F52B3235CBDAB74846 /* [CP] Check Pods Manifest.lock */,
 				241AFBEE2D490F62004C6FDB /* Sources */,
 				241AFBEF2D490F62004C6FDB /* Frameworks */,
 				241AFBF02D490F62004C6FDB /* Resources */,
+				2F30C51E87322359085A0684 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -147,6 +174,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F30C51E87322359085A0684 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TargetVideo Task/Pods-TargetVideo Task-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TargetVideo Task/Pods-TargetVideo Task-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TargetVideo Task/Pods-TargetVideo Task-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E42D48F52B3235CBDAB74846 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TargetVideo Task-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		241AFBEE2D490F62004C6FDB /* Sources */ = {
@@ -302,6 +371,7 @@
 		};
 		241AFC072D490F67004C6FDB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11FFA771AF383CBA3017818A /* Pods-TargetVideo Task.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -330,6 +400,7 @@
 		};
 		241AFC082D490F67004C6FDB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B21D3B4E78196D73586EF507 /* Pods-TargetVideo Task.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

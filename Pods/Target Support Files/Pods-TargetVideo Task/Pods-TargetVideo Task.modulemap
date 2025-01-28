@@ -1,0 +1,6 @@
+framework module Pods_TargetVideo_Task {
+  umbrella header "Pods-TargetVideo Task-umbrella.h"
+
+  export *
+  module * { export * }
+}
