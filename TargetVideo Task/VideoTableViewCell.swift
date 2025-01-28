@@ -32,8 +32,8 @@ class VideoTableViewCell: UITableViewCell {
         contentView.addSubview(thumbnailView)
         thumbnailView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            thumbnailView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30),
-            thumbnailView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 30),
+            thumbnailView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            thumbnailView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
             thumbnailView.heightAnchor.constraint(equalToConstant: 100),
             thumbnailView.widthAnchor.constraint(equalToConstant: 150)
         ])
@@ -41,10 +41,10 @@ class VideoTableViewCell: UITableViewCell {
         contentView.addSubview(title)
         title.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            title.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30),
+            title.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             title.topAnchor.constraint(equalTo: thumbnailView.bottomAnchor, constant: 20),
-            title.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -30),
-            title.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -30)
+            title.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            title.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20)
         ])
     }
     

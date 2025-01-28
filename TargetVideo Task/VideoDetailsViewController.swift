@@ -14,8 +14,7 @@ class VideoDetailsViewController: UIViewController {
     
     private lazy var playerView: YTPlayerView = {
         let playerView = YTPlayerView()
-        playerView.load(withVideoId: videoItem.id,
-                        playerVars: ["playsinline": 1])
+        playerView.load(withVideoId: videoItem.id)
         return playerView
     }()
     
@@ -32,7 +31,6 @@ class VideoDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        view.backgroundColor = .white
         title = "Video Details Page"
         
         playerView.delegate = self
