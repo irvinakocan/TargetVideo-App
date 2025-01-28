@@ -14,6 +14,8 @@ class HomeViewController: UIViewController {
         tableView.register(VideoTableViewCell.self, forCellReuseIdentifier: VideoTableViewCell.identifier)
         return tableView
     }()
+    
+    private var videos = [YouTubeItem]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,12 +40,19 @@ class HomeViewController: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+        
+        APICaller.fetchPopularVideos(completion: { [weak self] items in
+            self?.videos.append(contentsOf: items ?? [])
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        })
     }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return videos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,6 +60,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: VideoTableViewCell.identifier, for: indexPath) as? VideoTableViewCell else {
             return UITableViewCell()
         }
+        cell.configure(model: videos[indexPath.row])
         
         return cell
     }
