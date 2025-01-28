@@ -9,9 +9,13 @@ import Foundation
 
 class APICaller {
     
+    public static var isPaginating = false
+    
     private static var nextPageToken: String?
     
     static func fetchPopularVideos(completion: @escaping ([YouTubeItem]?) -> Void) {
+        
+        isPaginating = true
         
         guard var urlComponents = URLComponents(string: YOUTUBE_API + GET_VIDEOS_ENDPOINT) else {
             completion(nil)
@@ -50,6 +54,7 @@ class APICaller {
             
             nextPageToken = youtubeResponse.nextPageToken
             completion(youtubeResponse.items)
+            isPaginating = false 
         })
         task.resume()
     }

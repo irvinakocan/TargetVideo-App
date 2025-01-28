@@ -40,13 +40,6 @@ class HomeViewController: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
-        
-        APICaller.fetchPopularVideos(completion: { [weak self] items in
-            self?.videos.append(contentsOf: items ?? [])
-            DispatchQueue.main.async {
-                self?.tableView.reloadData()
-            }
-        })
     }
 }
 
@@ -63,5 +56,26 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(model: videos[indexPath.row])
         
         return cell
+    }
+}
+
+extension HomeViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let position = scrollView.contentOffset.y
+        
+        if position > tableView.contentSize.height - scrollView.frame.size.height {
+            
+            guard APICaller.isPaginating == false else {
+                return
+            }
+            
+            APICaller.fetchPopularVideos(completion: { [weak self] items in
+                self?.videos.append(contentsOf: items ?? [])
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
+            })
+        }
     }
 }
