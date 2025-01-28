@@ -17,6 +17,7 @@
 		241AFC0E2D493903004C6FDB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241AFC0D2D493903004C6FDB /* Constants.swift */; };
 		241AFC102D494244004C6FDB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241AFC0F2D494244004C6FDB /* Models.swift */; };
 		241AFC122D49488D004C6FDB /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241AFC112D49488D004C6FDB /* APICaller.swift */; };
+		241AFC142D496722004C6FDB /* VideoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241AFC132D496722004C6FDB /* VideoDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		241AFC0D2D493903004C6FDB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		241AFC0F2D494244004C6FDB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		241AFC112D49488D004C6FDB /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		241AFC132D496722004C6FDB /* VideoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				241AFC0F2D494244004C6FDB /* Models.swift */,
 				241AFC112D49488D004C6FDB /* APICaller.swift */,
 				241AFC0B2D491F7A004C6FDB /* VideoTableViewCell.swift */,
+				241AFC132D496722004C6FDB /* VideoDetailsViewController.swift */,
 				241AFC092D4916D8004C6FDB /* HomeViewController.swift */,
 				241AFBFB2D490F62004C6FDB /* Main.storyboard */,
 				241AFBFE2D490F67004C6FDB /* Assets.xcassets */,
@@ -156,6 +159,7 @@
 				241AFC122D49488D004C6FDB /* APICaller.swift in Sources */,
 				241AFC102D494244004C6FDB /* Models.swift in Sources */,
 				241AFBF82D490F62004C6FDB /* SceneDelegate.swift in Sources */,
+				241AFC142D496722004C6FDB /* VideoDetailsViewController.swift in Sources */,
 				241AFC0A2D4916D8004C6FDB /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
