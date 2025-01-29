@@ -18,6 +18,7 @@
 		241AFC102D494244004C6FDB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241AFC0F2D494244004C6FDB /* Models.swift */; };
 		241AFC122D49488D004C6FDB /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241AFC112D49488D004C6FDB /* APICaller.swift */; };
 		241AFC142D496722004C6FDB /* VideoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241AFC132D496722004C6FDB /* VideoDetailsViewController.swift */; };
+		24550E522D4A82470032CB9C /* VideoTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 24550E512D4A82470032CB9C /* VideoTracker.m */; };
 		F92BD4DC43DB7F49CC0C0B24 /* Pods_TargetVideo_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49261FA8CDCA3BD69B5327DA /* Pods_TargetVideo_Task.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,9 @@
 		241AFC0F2D494244004C6FDB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		241AFC112D49488D004C6FDB /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		241AFC132D496722004C6FDB /* VideoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailsViewController.swift; sourceTree = "<group>"; };
+		24550E4F2D4A80B90032CB9C /* VideoTracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoTracker.h; sourceTree = "<group>"; };
+		24550E502D4A82460032CB9C /* TargetVideo Task-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TargetVideo Task-Bridging-Header.h"; sourceTree = "<group>"; };
+		24550E512D4A82470032CB9C /* VideoTracker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoTracker.m; sourceTree = "<group>"; };
 		49261FA8CDCA3BD69B5327DA /* Pods_TargetVideo_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TargetVideo_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B21D3B4E78196D73586EF507 /* Pods-TargetVideo Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetVideo Task.release.xcconfig"; path = "Target Support Files/Pods-TargetVideo Task/Pods-TargetVideo Task.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,7 +62,6 @@
 				11FFA771AF383CBA3017818A /* Pods-TargetVideo Task.debug.xcconfig */,
 				B21D3B4E78196D73586EF507 /* Pods-TargetVideo Task.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -95,6 +98,9 @@
 				241AFBFE2D490F67004C6FDB /* Assets.xcassets */,
 				241AFC002D490F67004C6FDB /* LaunchScreen.storyboard */,
 				241AFC032D490F67004C6FDB /* Info.plist */,
+				24550E4F2D4A80B90032CB9C /* VideoTracker.h */,
+				24550E512D4A82470032CB9C /* VideoTracker.m */,
+				24550E502D4A82460032CB9C /* TargetVideo Task-Bridging-Header.h */,
 			);
 			path = "TargetVideo Task";
 			sourceTree = "<group>";
@@ -141,6 +147,7 @@
 				TargetAttributes = {
 					241AFBF12D490F62004C6FDB = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -222,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24550E522D4A82470032CB9C /* VideoTracker.m in Sources */,
 				241AFC0E2D493903004C6FDB /* Constants.swift in Sources */,
 				241AFBF62D490F62004C6FDB /* AppDelegate.swift in Sources */,
 				241AFC0C2D491F7A004C6FDB /* VideoTableViewCell.swift in Sources */,
@@ -375,6 +383,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V4H26V8MF9;
@@ -393,6 +402,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.irvinakocan.TargetVideo-Task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TargetVideo Task/TargetVideo Task-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -404,6 +415,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V4H26V8MF9;
@@ -422,6 +434,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.irvinakocan.TargetVideo-Task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TargetVideo Task/TargetVideo Task-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

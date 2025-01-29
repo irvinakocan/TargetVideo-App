@@ -18,6 +18,8 @@ class VideoDetailsViewController: UIViewController {
         return playerView
     }()
     
+    private var videoTracker = VideoTracker()
+    
     private lazy var name: UILabel = {
         let label = UILabel()
         label.text = videoItem.snippet.title
@@ -69,7 +71,24 @@ class VideoDetailsViewController: UIViewController {
 }
 
 extension VideoDetailsViewController: YTPlayerViewDelegate {
+    
     func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
-        playerView.playVideo()
+        print("YouTube player is ready")
+    }
+    
+    func playerView(_ playerView: YTPlayerView, didChangeTo state: YTPlayerState) {
+        switch state {
+        case .playing:
+            print("Video started/resumed")
+            videoTracker.startTracking(withInterval: 1.0)
+        case .paused:
+            print("Video paused")
+            videoTracker.pauseTracking()
+        case .ended:
+            print("Video ended")
+            videoTracker.stopTracking()
+        default:
+            break
+        }
     }
 }
